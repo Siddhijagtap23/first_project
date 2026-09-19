@@ -1,0 +1,24 @@
+step 1: create env
+python -m venv myenv
+
+step2: activate env
+myenv\scripts\activate
+
+step3:create
+ni requirements.text
+
+step4:
+pip install -r requirements.text
+
+==>
+.env -->secreate key
+
+step 5:
+ni .env
+
+ni==> new item create 
+
+rn==> remove
+
+
+
