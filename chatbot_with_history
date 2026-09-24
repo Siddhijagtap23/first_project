@@ -1,0 +1,28 @@
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+from langchain_core.messages import HumanMessage, AIMessage
+
+load_dotenv(override=True)
+"""  chatbot with proper history """
+llm = ChatGroq(model="openai/gpt-oss-120b")
+
+print("My first chatbot")
+
+history = []
+
+while True:
+
+    prompt = input("user: ")
+
+    if prompt == "exit":
+        break
+
+    history.append(HumanMessage(content=prompt))
+
+    response = llm.invoke(history)
+
+    history.append(AIMessage(content=response.content))
+
+    print("AI:", response.content)
+
+print(history)
