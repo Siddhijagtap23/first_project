@@ -8,7 +8,7 @@ step3:create
 ni requirements.text
 
 step4:
-pip install -r requirements.text
+requirements.text
 
 ==>
 .env -->secreate key
